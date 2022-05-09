@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="title">
+    <h1 *ngIf="type=='decollages'">DECOLLAGES</h1>
+    <h1 *ngIf="type=='atterissages'">ATTERISSAGES</h1>
+  </div>
+  <div class="sections">
+    <div class="left">
+      <div class="top">
+        <app-filtres (filtresEvent)="onFiltresEvent($event)"></app-filtres>
+      </div>
+      <div class="bottom">
+        <app-liste-vols [type]="type" [listeVols]="vols" (vol)="updatePassager($event)"></app-liste-vols>
+      </div>
+    </div>
+    <div class="right">
+      <app-liste-passagers [listePassagers]="passagers"></app-liste-passagers>
+    </div>
+  </div>
+</div>

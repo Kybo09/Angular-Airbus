@@ -1,0 +1,9 @@
+<!-- Affichage de la liste des vols -->
+<div class="vol-div">
+  <p style="flex: 1 0 5%;"></p>
+  <p>N°ICAO</p>
+  <p>Matricule</p>
+  <p>Trajet</p>
+  <p>Compagnie</p>
+</div>
+<app-vol *ngFor="let vol of listeVols" [vol]="vol" [type]="type" (click)="showPassager(vol)"></app-vol>

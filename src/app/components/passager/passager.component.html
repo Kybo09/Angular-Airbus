@@ -1,0 +1,8 @@
+<!-- Affichage d'un passager -->
+<div *ngIf="passager != null" class="passager-div" [appNombreBagage]="passager.nbBagagesSoute" [appBagagesVol]="passager.classeVol">
+  <img *ngIf="photoShow == true" src="{{ passager.image }}">
+  <img *ngIf="photoShow == false" src="/assets/defaultPic.jpg">
+  <a matTooltip="{{passager.email}}" matTooltipPosition="below" matTooltipHideDelay="1" href="mailto:{{ passager.email }}">{{ passager.nom }}</a>
+  <p [appClasseVol]="passager.classeVol">{{ passager.classeVol }}</p>
+  <p> <mat-icon>work</mat-icon>X{{ passager.nbBagagesSoute }} </p>
+</div>

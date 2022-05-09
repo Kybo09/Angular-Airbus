@@ -1,0 +1,8 @@
+<!-- Affichage de la liste des passagers -->
+<h2>Liste des passagers</h2>
+<mat-slide-toggle (change)="togglePhoto($event)"
+  class="example-margin">
+  Montrer les photos
+</mat-slide-toggle>
+<app-passager *ngFor="let passager of listePassagers" [passager]="passager" [photoShow]="photoShowed"></app-passager>
+

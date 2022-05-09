@@ -1,0 +1,11 @@
+.vol-div{
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+  border-bottom: 2px solid black;
+  p{
+    flex: 1 0 20%;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
